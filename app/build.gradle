@@ -21,14 +21,11 @@ android {
         }
     }
 
-    //dataBinding {
-    //    enabled = true
-    //    enabledForTests = true
-    //}
     buildFeatures {
-        dataBinding true
+        dataBinding =  true
     }
-    //Compile-Options Block
+
+    
     kotlinOptions {
         jvmTarget = "1.8"
     }
@@ -42,11 +39,10 @@ android {
 dependencies {
 
     // App dependencies
-    implementation "androidx.appcompat:appcompat:$appCompatVersion"
-    implementation "androidx.cardview:cardview:$cardVersion"
-    implementation "com.google.android.material:material:$materialVersion"
-    implementation "androidx.recyclerview:recyclerview:$recyclerViewVersion"
-    implementation "androidx.annotation:annotation:$androidXAnnotations"
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("com.google.android.material:material:1.11.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion"
     implementation "com.jakewharton.timber:timber:$timberVersion"
     implementation "androidx.legacy:legacy-support-v4:$androidXLegacySupport"
